@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_wallpaper"
+        android:icon="@drawable/ic_baseline_wallpaper_24"
+        android:title="WALLPAPER"/>
+    <item android:id="@+id/nav_contacts"
+        android:icon="@drawable/ic_baseline_contact_phone_24"
+        android:title="CONTACTS"/>
+    <item android:id="@+id/nav_date_calculator"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title="DATE_CALCULATOR"/>
+    <item android:id="@+id/nav_text_generator"
+        android:icon="@drawable/ic_baseline_text_snippet_24"
+        android:title="TEXT_GENERATOR"/>
+    <item android:id="@+id/nav_game"
+        android:icon="@drawable/ic_baseline_videogame_asset_24"
+        android:title="GAME"/>
+</menu>

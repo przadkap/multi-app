@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/bigImage"
+        android:src="@drawable/pic1"
+        />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hsv_layout"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/bigImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/li_layout_pics"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/hsv_layout"
+        android:id="@+id/lil_equation">
+
+
+        <TextView
+            android:id="@+id/tv_first_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toRightOf="@id/tv_first_no"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_second_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999"
+            android:textSize="30sp"
+            app:layout_constraintRight_toRightOf="parent">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_result"
+        app:layout_constraintTop_toBottomOf="@id/lil_equation"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Result"
+        android:textSize="30sp"
+        android:maxLines="1">
+
+    </EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Change Wallpaper"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="15dp"
+        android:id="@+id/btn_change_wallpaper"
+        style="@style/red_button"
+        android:padding="15dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

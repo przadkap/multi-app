@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Date Calculator"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:id="@+id/tv_title_dc"/>-->
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/lil_dc_buttons"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Select date"
+            android:id="@+id/btn_dc_pick_from"
+            style="@style/gold_button"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Select date"
+            android:id="@+id/btn_dc_pick_to"
+            style="@style/gold_button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lil_dc_buttons"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:id="@+id/lil_dc_labels"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="From"
+            android:textSize="30sp"
+            android:textColor="@color/redish"
+            android:textStyle="italic"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="To"
+            android:textSize="30sp"
+            android:textColor="@color/redish"
+            android:layout_marginEnd="15dp"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lil_dc_labels"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/lil_dc_dates"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="26/02/2021"
+            android:textSize="25sp"
+            android:textColor="@color/redish"
+            android:textStyle="bold"
+            android:id="@+id/tv_dc_date_from"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="03/06/2021"
+            android:textSize="25sp"
+            android:textColor="@color/redish"
+            android:textStyle="bold"
+            android:id="@+id/tv_dc_date_to"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Chosen dates are"
+        android:textSize="35sp"
+        android:textColor="@color/redish"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lil_dc_dates"
+        android:layout_marginTop="50dp"
+        android:id="@+id/tv_dc_main_label_start"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="15 days"
+        android:textSize="30sp"
+        android:textColor="@color/redish"
+        android:textStyle="italic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dc_main_label_start"
+        android:id="@+id/tv_dc_days"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="360 hours"
+        android:textSize="30sp"
+        android:textColor="@color/redish"
+        android:textStyle="italic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dc_days"
+        android:id="@+id/tv_dc_hours"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="21600 minutes"
+        android:textSize="30sp"
+        android:textColor="@color/redish"
+        android:textStyle="italic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dc_hours"
+        android:id="@+id/tv_dc_minutes"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="apart"
+        android:textSize="35sp"
+        android:textColor="@color/redish"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dc_minutes"
+        android:id="@+id/tv_dc_main_label_end"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="CALCULATE"
+        android:textSize="30sp"
+        style="@style/red_button"
+        android:id="@+id/btn_dc_calculate"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
